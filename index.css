@@ -20,7 +20,7 @@ body{
 }
 
 .space {
-    animation: move var(--duration) linear infinite;
+    animation: movestars var(--duration) linear infinite;
 }
 
 @keyframes move {
