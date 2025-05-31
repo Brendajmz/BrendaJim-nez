@@ -17,13 +17,10 @@ body{
     top: 0;
     left: 0;
     opacity: 0.75;
+    animation: moveStars var(--duration) linear infinite;
 }
 
-.space {
-    animation: movestars var(--duration) linear infinite;
-}
-
-@keyframes move {
+@keyframes moveStars {
     from {
         transform: translateY(0);
     }
