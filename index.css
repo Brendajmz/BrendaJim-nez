@@ -17,11 +17,13 @@ body{
     top: 0;
     left: 0;
     opacity: 0.75;
+}
+
+.space {
     animation: move var(--duration) linear infinite;
-    }
+}
 
-
-@keyframes moveStars {
+@keyframes move {
     from {
         transform: translateY(0);
     }
@@ -29,4 +31,3 @@ body{
     to {
         transform: translateY(-100vh);
     } }
-
