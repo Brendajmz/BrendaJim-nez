@@ -1,4 +1,3 @@
-console.log("Script cargado correctamente");
 const COLORS = ["#fff2", "#fff4", "#fff7", "#fffc"];
 
 const generateSpaceLayer = (size, selector, totalStars, duration) => {
@@ -9,11 +8,10 @@ const generateSpaceLayer = (size, selector, totalStars, duration) => {
     const y = Math.floor(Math.random() * 100);
     layer.push(`${x}vw ${y}vh 0 ${color}, ${x}vw ${y + 100}vh 0 ${color}`);
   }
-  document.querySelectorAll(selector).forEach(container => {
-    container.style.setProperty("--size", size);
-    container.style.setProperty("--duration", duration);
-    container.style.setProperty("--space-layer", layer.join(","));
-});
+  const container = document.querySelector(selector);
+  container.style.setProperty("--size", size);
+  container.style.setProperty("--duration", duration);
+  container.style.setProperty("--space-layer", layer.join(","));
 }
 
 generateSpaceLayer("2px", ".space-1", 250, "25s");
